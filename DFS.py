@@ -36,8 +36,10 @@ for edge in [[0,1],[0,2],[1,0],[1,3],[2,4],[2,5],[2,0],[3,1],[4,6],[4,2],[5,2]]:
     graph[edge[0]][edge[1]] = graph[edge[1]]
     graph[edge[1]][edge[0]] = graph[edge[0]]
 
-print(graph)
 visited = []
 visit(1, graph, (lambda n: visited.append(str(n))))
 
+print("The Graph Paths:")
+print(graph)
+print("The Shortest Path:")
 print(', '.join(visited)) 
